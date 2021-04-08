@@ -27,7 +27,89 @@
         .card img {
             width: 100%;
         }
-    </style>
+
+
+
+        /* this source code just for footer */
+        /* footer */
+            footer {
+            display: grid;
+            background-color: rgb(240, 240, 240);
+            padding: 25px 50px;
+            grid-template-areas:
+                "area1 area2"
+                "area3 area3";
+            }
+            .footer-top {
+            grid-area: area1;
+            }
+            .footer-top p {
+            width: 400px;
+            }
+            .footer-top .footer-top-body {
+            display: flex;
+            }
+            .footer-top .footer-top-body > * {
+            font-size: 1.5rem;
+            padding: 0 5px;
+            cursor: pointer;
+            }
+            .footer-body {
+            padding: 40px 0;
+            display: grid;
+            grid-area: area2;
+            grid-template-columns: repeat(auto-fit, minmax(170px, 175px));
+            }
+            .footer-part {
+            display: flex;
+            flex-direction: column;
+            padding: 10px 0;
+            }
+            .footer-part a {
+            text-decoration: none;
+            margin-bottom: 10px;
+            color: black;
+            transition: 0.25s;
+            }
+            .footer-body .footer-part a:hover {
+            color: rgb(133, 132, 132);
+            margin-left: 5px;
+            }
+            .footer-bottom {
+            grid-area: area3;
+            margin-top: 50px;
+            text-align: center;
+            }
+            /* this responsive for footer */
+
+            @media (max-width: 850px) {
+            /* footer */
+            footer {
+                grid-template-areas:
+                "area1"
+                "area2"
+                "area3";
+            }
+            .footer-body {
+                padding-top: 20px;
+                justify-content: space-between;
+            }
+            }
+
+            @media (max-width: 564px) {
+            /* footer */
+            footer {
+                background-color: rgb(240, 240, 240);
+                padding: 20px;
+            }
+            .footer-top p {
+                width: 100%;
+            }
+            .footer-body {
+                grid-template-columns: none;
+            }
+            }
+                </style>
 </head>
 <body>
     <div class="card">
@@ -36,5 +118,41 @@
             <p>Lorem ipsum dolor sit amet.</p>
         </div>
     </div>
+
+
+
+
+    <!-- footer -->
+    <footer>
+        <div class="footer-top">
+            <h3>ShowCaseGallery.com</h3>
+            <p>Tampilkan karya-karya terbaikmu dan dilihat oleh seluruh dunia</p>
+            <div class="footer-top-body">
+                <a class="fab fa-instagram" href="#" class="icon"></a>
+                <a class="fas fa-envelope" href="#" class="icon"></a>
+                <a class="fas fa-info-circle" class="icon" href="#"></a>
+            </div>
+        </div>
+        <div class="footer-body">
+            <div class="footer-part">
+                <a href="/pages/company.html#company-page">Company</a>
+                <a href="/pages/company.html#tesimoni">Testimoni</a>
+                <a href="/pages/company.html#join">Karir</a>
+            </div>
+            <div class="footer-part">
+                <a href="/pages/people.html">Komunitas</a>
+                <a href="/index.html">Karya Terbaru</a>
+                <a href="/index.html">Trending</a>
+            </div>
+            <div class="footer-part">
+                <a href="https://fontawesome.com/" target="_blank">Support by Font Awesome</a>
+                <a href="/pages/company.html#kebijakanDanKetentuan">Kebijakan dan Ketentuan</a>
+                <a href="/pages/company.html#support">Dukung Kami</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <h6>Copyright © 2021 ShowCaseGallery.com. All Rights Reserved</h6>
+        </div>
+    </footer>
 </body>
 </html>
